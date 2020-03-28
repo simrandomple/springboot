@@ -1,0 +1,14 @@
+#   数据库配置
+spring:
+  datasource:
+    url: jdbc:mysql:///test?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  #  指定xml配置文件的位置，没有配置，默认为mapper接口所在包
+  mapperLocations: classpath:needpack.mapper/*.xml
+  #  mybatis主配置文件，可以配置typealise等信息，要配置，内容可以为空
+  config-location: classpath:mybatis-config.xml
+  #  配置自动创建别名的包
+  typeAliasesPackage: com.example.domain
